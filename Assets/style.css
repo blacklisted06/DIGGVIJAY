@@ -1,25 +1,124 @@
 :root {
-    --primary: #239055;
-    --secondary: #E4BA2F;
-    --white: #ffffff;
+    --primary-color: #249055;
+    --secondary-color: #E4BA2F;
+    --white-color: #ffffff;
     --heading-color: #38312A;
     --text-color: #615549;
+	--beige-color: #F0ECE7
+}
+.primary-color{
+	color: #249055;
+}
+.secondary-color{
+	color: #E4BA2F;
+}
+.heading-color{
+	color: #38312A;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button{
+	font-family: Urbanist;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p{
+	font-family: Jost;
 }
 
 a {
     text-decoration: none !important;
 }
 
+
+.common-section-spacing-top {
+    padding-top: 150px;
+}
+
+.common-section-spacing-bottom {
+    padding-bottom: 150px;
+}
+
+.common-section-heading {
+    color: #38312A;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.common-section-subheading {
+    color: #615549;
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.offwhite-bg {
+    background-color: #F0ECE7;
+}
+
+.common-info-span {
+    color: #249055;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.9px;
+}
+
 /* btn SH */
 .btn-primary{
-    background-color: var(--primary);
+    background-color: var(--primary-color);
     color: var(--white);
-    border-color: var(--primary);
+    border-color: var(--primary-color);
 }
+.btn-secondary{
+	background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-color: var(--secondary-color);
+}
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* --------------------common css SH--------------- */
+.commom-heading {
+    color: var(--heading-color);
+    font-size: 44px;
+    line-height: 130%;
+}
+.commom-description {
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: normal;
+}
+
+/* -------------- EH ----------------------------- */
+
 /*---------header SH-------  */
 .common-header {
     position: fixed;
     z-index: 1049;
+}
+.navbar-nav .menu-item a.nav-link {
+    color: var(--white-color);
+}
+.header-sticky {
+    background: var(--heading-color);
+    padding: 10px 0;
+    transition: background 0.3s ease;
 }
 /* -------hero section SH --------- */
 .common-section-spacing{
@@ -35,8 +134,254 @@ a {
     width: 100%;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
 }
+.hero-banner .banner-heading {   
+    font-size: 52px;   
+}
 
-/* ----------------- portfolio-section -------------- */
+/* ----------------- portfolio-section SH -------------- */
+.common-subheading{ 
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.9px;  
+}
 .portfolio-tabs .nav-link.active img {
     filter: invert(1) brightness(10);
 }
+.portfolio-tabs .nav-pills .nav-link.active {
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--white-color);
+}
+.portfolio-tabs  .nav-pills .nav-link {   
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+	border-radius: 0;
+}
+.portfolio-card:hover .overlay-text {
+    opacity: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    padding: 30px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+    height: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.portfolio-section .swiper-pagination {
+    position: relative;
+    padding-top: 50px;
+}
+.portfolio-section{
+	background-color: var(--beige-color);
+}
+/* -------------- portfolio-section EH --------------------- */
+/* -------------- reach out section style SH -------------- */
+.react-out-section {
+    background: var(--heading-color);
+}
+
+/*  */
+
+/* = = = = = = = services Pages css starts here = = = = = =  */
+
+.common-services-banner {
+    max-height: 650px;
+    height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.common-services-banner.overlay::after {
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
+.common-services-banner .banner-heading {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.main-service-single-card {
+    background-color: #fff;
+    padding: 40px 80px;
+    transition: ease .3s all;
+}
+
+.main-service-single-card:hover {
+    background-color: #E4BA2F;
+    transition: ease .3s all;
+}
+
+.main-service-single-card .service-card-heading {
+    color: #38312A;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.main-service-single-card .service-card-subheading {
+    color: #342B0C;
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.service-readmore-link {
+    color: #409A69;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.green-cta-card {
+    background: linear-gradient(92deg, #0A2A19 -27.86%, #239055 49.53%, #0A2A19 126.93%);
+    padding: 90px 15px;
+}
+
+.faq-section .accordion-item {
+    background-color: transparent;
+    border: 0;
+}
+
+.faq-section .accordion-item .accordion-button {
+    color: #38312A;
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: transparent !important;
+    color: #38312A;
+    box-shadow: none !important;
+    outline: none !important;
+    border-bottom: 1px solid #E1DDDA;
+}
+
+.faq-section .accordion-item .accordion-button:not(.collapsed)::after {
+    background-image: url('../images/icons/faq-minus.png');
+}
+
+.faq-section .accordion-item .accordion-button::after {
+    background-image: url('../images/icons/faq-plus.png');
+}
+
+.process-slider-section .single-processSlidecard::after {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+}
+
+.process-slider-section .single-processSlidecard .single-processSlidecard-heading {
+    color: #E7D28E;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.processSlidecard-decs {
+    position: absolute;
+    z-index: 10;
+    top: auto;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.process-slider-section .cardnumber {
+    width: 56px;
+    height: 55px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #E4BA2F;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.process-slider-section .single-processSlidecard .single-processSlidecard-heading {
+    color: #E7D28E;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.process-slider-section .single-processSlidecard .single-processSlidecard-subheading {
+    color: #E7D28E;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0;
+    height: 0;
+    transition: ease .3s all;
+}
+
+.process-slider-section .single-processSlidecard:hover .single-processSlidecard-subheading {
+    opacity: 1;
+    height: auto;
+    transition: ease .3s all;
+}
+
+.process-slider-section .process-swiper {
+    padding-bottom: 90px;
+}
+
+.process-slider-section .process-swiper .swiper-button-next,
+.process-slider-section .process-swiper .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid #B2A699;
+}
+
+.process-slider-section .process-swiper .swiper-button-prev {
+    right: 85px;
+    left: auto;
+}
+
+.process-slider-section .process-swiper .swiper-button-next:after,
+.process-slider-section .process-swiper .swiper-button-prev:after {
+    font-size: 20px;
+    color: #B2A699;
+}
+
+.story-section .imageGrid-list li.single-img:first-child,
+.story-section .imageGrid-list li.single-img:nth-child(2) {
+    width: calc(50% - 0.5rem);
+}
+
+.story-section .imageGrid-list li.single-img:first-child img,
+.story-section .imageGrid-list li.single-img:nth-child(2) img {
+    aspect-ratio: 1.5/1;
+    width: 100%;
+    object-fit: cover;
+}
+
+.story-section .imageGrid-list li.single-img:nth-child(3) {
+    width: 100%;
+}
+
+.story-section .imageGrid-list li.single-img:nth-child(3) img {
+    aspect-ratio: 2/1;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* = = = = = = = services section css ends here = = = = = =  */
